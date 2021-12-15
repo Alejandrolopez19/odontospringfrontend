@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <title>LOGIN</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="header-container">
+           
+            <div class="header-body">
+                <div class="header-banner-navbar">
+                    <div class="header-banner-navbar-left">
+                        <img src="img/icons/logo.png">
+                           <a th:href="@{/}">
+                            <p>Inicio</p>
+                        </a>
+                         <a th:href="@{/menu}">
+                            <p>Menu</p>
+                        </a>
+                    </div>
+                    <div class="header-banner-navbar-right">
+                        <img src="img/icons/ico_user.svg">
+                        <p>Iniciar sesion</p>
+                    </div>
+                </div>
+                <div class="header-banner">
+                    <div class="header-banner-text">
+                        
+                        <!-- login -->
+
+                        <div class="login">
+                        <div class="login-header">
+                        <h1>Iniciar Sesión</h1>
+                         </div>
+                         <div class="login-form">
+                         <h3>Usuario:</h3>
+                        <input type="text" placeholder="Username"/><br>
+                      <h3>Clave:</h3>
+                  <input type="password" placeholder="Password"/>
+                               <br>
+                      <a href="listpacientes.html">
+                      <input type="button" value="Login" class="login-button"/>
+                          
+                      </a>
+                 
+                 </div>
+                </div>
+
+                        <!-- fin login -->
+
+                
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>    
+
+
+
+
+
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="container-footer-child">
+                <div class="footer-item">
+                    <img src="img/icons/logo.png">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, totam corporis ullam
+                    </p>
+                    <div class="footer-container-list">
+                        <div class="footer-list">
+                            <img src="img/icons/mail.png" alt="">
+                            <p>SPRIGNBOOT@ODONTO.com</p>
+                        </div>
+                        <div class="footer-list">
+                            <img src="img/icons/phone.png" alt="">
+                            <p>3889482</p>
+                        </div>
+                        <div class="footer-list">
+                            <img src="img/icons/location.png" alt="">
+                            <p>Calle Spring Boot 19-09 </p>
+                        </div>   
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <h1 class="title">Instagram</h1>
+                   <a href=""></a>
+                </div>
+                <div class="footer-item">
+                    <h1 class="title">Facebook</h1>
+                    <a href=""></a>
+                </div>
+                
+            </div>
+            <div class="footer-copy">
+                <hr>
+                <p> © 2021. Déchets productions, All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
