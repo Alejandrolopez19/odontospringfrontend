@@ -262,7 +262,16 @@ nav .profile-details i{
 
 /* left box */
 .home-content .sales-boxes .recent-sales{
-  width: 65%;
+  width: 90%;
+  background: #fff;
+  padding: 20px 30px;
+  margin: 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-content .sales-boxes .recent-sales2{
+  width: 90%;
   background: #fff;
   padding: 20px 30px;
   margin: 0 20px;
@@ -508,38 +517,16 @@ nav .profile-details i{
 .container-2 input#search{
   width: 400px;
   height: 50px;
-  background: #B2BEFA;
+  background: none;
   border: none;
   font-size: 10pt;
   float: left;
-  color: #262626;
+   color: black;
   padding-left: 35px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  color: #fff;
  
-  -webkit-transition: width .55s ease;
-  -moz-transition: width .55s ease;
-  -ms-transition: width .55s ease;
-  -o-transition: width .55s ease;
-  transition: width .55s ease;
-}
-
-.container-2 input#search::-webkit-input-placeholder {
-   color: #65737e;
-}
- 
-.container-2 input#search:-moz-placeholder { /* Firefox 18- */
-   color: #65737e;  
-}
- 
-.container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
-   color: #65737e;  
-}
- 
-.container-2 input#search:-ms-input-placeholder {  
-   color: #65737e;  
 }
 
 .container-2 .icon{
@@ -551,9 +538,107 @@ nav .profile-details i{
   color: #4f5b66;
 }
 
+.buscarpordocumentocita{
+   width: 400px;
+  height: 50px;
+  background: none;
+  border: none;
+  font-size: 10pt;
+  float: left;
+   color: black;
+  padding-left: 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+ 
+ 
+
+}
+
+
 
 .tabla{
   text-align: left;
   width: auto;
   margin: auto;
+    border-collapse:separate; 
+border-spacing:1em;
 }
+
+
+/*tabla de citas */
+.tablacitas{
+   text-align: left;
+  width: auto;
+  margin: auto;
+  border-collapse:separate; 
+border-spacing:2em;
+}
+
+
+
+/*botones para citas*/
+/*botones para citas*/
+/*botones para citas*/
+
+.sales-boxes .box .botonanulado{ /* boton anulado*/
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.sales-boxes .box .botonanulado a{ /* boton anulado*/
+  color: #fff;
+  background: #F80808;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-weight: 380;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.sales-boxes .box .botonanulado a:hover{ /* boton anulado*/
+  background:  #820808;
+}
+
+.sales-boxes .box .botonpago{ /* boton pago verde*/
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.sales-boxes .box .botonpago a{ /* boton pago verde*/
+  color: #fff;
+  background: #33EE20;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-weight: 380;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.sales-boxes .box .botonpago a:hover{ /* boton pago verde*/
+  background:  #0BAA12;
+}
+
+
+.sales-boxes .box .botonbuscar{ /* boton buscar verde*/
+  width: 100%;
+  
+  
+}
+.sales-boxes .box .botonbuscar a{ /* boton buscar verde*/
+  color: #fff;
+  background: #33EE20;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-weight: 380;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.sales-boxes .box .botonbuscar a:hover{ /* boton buscar verde*/
+  background:  #0BAA12;
+}
+
+/* FIN botones para citas*/
+/* FIN botones para citas*/
+/* FIN botones para citas*/

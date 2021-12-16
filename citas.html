@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admincat.css">
+  
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/paneladmin.css">
+    
+    
+    <title>Administración de Citas</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            
+            <div class="header-body">
+                <div class="header-banner-navbar">
+                    <div class="header-banner-navbar-left">
+                        <img src="img/icons/logo.png">
+                       
+                        <a href="login.html">
+                            <p>SALIR</p>
+                        </a>
+                    </div>
+                    <div class="header-banner-navbar-right">
+                        <img src="img/icons/ico_user.svg">
+                        <p>ADMINISTRADOR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>    
+  
+
+
+
+
+<div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">PANEL ADMINISTRADOR</span>
+    </div>
+      <ul class="nav-links">
+        
+     
+         <li>
+          <a href="reghistoria.html">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">Registrar historia clinica</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="listpacientes.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Pacientes</span>
+          </a>
+        </li>
+
+           <li>
+          <a href="agendarcita.html">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Agendar Cita</span>
+          </a>
+        </li>
+
+            <li>
+          <a href="citas.html" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Citas</span>
+          </a>
+        </li>
+
+
+
+      
+
+  
+        <li class="log_out">
+          <a href="login.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+  
+<br>
+    <div class="home-content">
+      
+
+      <div class="sales-boxes">
+        <div class="recent-sales2 box">
+          <div class="title">CITAS</div>
+<br>
+
+<!-- busqueda pacientes -->
+<div class="box">
+  <div>
+      
+      <input class="buscarpordocumentocita" type="number" pattern="[0-9]" id="search" placeholder="Busqueda de Citas por documento" />
+  </div>
+
+  <div class="botonbuscar"><a href="#">BUSCAR</a></div>
+</div>
+
+<!-- busqueda pacientes -->
+<br>
+<br>
+<br>
+
+
+     <!-- Para seleccion de pago  en td estado de cita pago o debe 
+      <label for="selectpago"></label>
+      <select  name="estadopago" id="estadodepago_input" required>
+        <option disabled hidden selected>Seleccionar</option>
+        <option><div class="botonpago"><a href="#">PAGO ✔</a></div></option>
+        <option><div class="botonanulado"><a href="#">ANULADA</a></div></option>
+      </select>
+    fin prueba en td estado de cita pago o debe -->
+
+<table class="tablacitas" border="0">
+<tr><th>NOMBRE DOCTOR</th><th>FECHA CONSULTA</th><th>ODONTOGRAMA</th><th>ESTADO DE PAGO</th></tr>
+    <!--fila -->
+      <tr>
+        <td>OdontoSpring </td>
+        <td>24/12/2021 02:00:PM</td>
+        <td><div class="botonodonto"><a href="templateodontograma.html">Odontograma </a></div></td>
+        <td> <div class="botonpago"><a href="#">PAGO ✔</a></div>    </td>
+      </tr>
+    <!-- fin fila -->
+
+    <!--fila -->
+     <!--fila -->
+      <tr>
+        <td>OdontoSpring </td>
+        <td>24/12/2021 02:00:PM</td>
+        <td><div class="botonodonto"><a href="templateodontograma.html">Odontograma </a></div></td>
+        <td> <div class="botonanulado"><a href="#">ANULADA</a></div></td>
+      </tr>
+    <!-- fin fila -->
+     <!--fila -->
+      <tr>
+        <td>OdontoSpring </td>
+        <td>24/12/2021 02:00:PM</td>
+        <td><div class="botonodonto"><a href="templateodontograma.html">Odontograma </a></div></td>
+        <td><div class="botonpago"><a href="#">PAGO ✔</a></div></td>
+      </tr>
+    <!-- fin fila -->
+
+    <!--fila -->
+     <!--fila -->
+      <tr>
+        <td>OdontoSpring </td>
+        <td>24/12/2021 02:00:PM</td>
+        <td><div class="botonodonto"><a href="templateodontograma.html">Odontograma </a></div></td>
+        <td> <div class="botonanulado"><a href="#">ANULADA</a></div></td>
+      </tr>
+    <!-- fin fila -->
+
+     <!--fila -->
+      <tr>
+        <td>OdontoSpring </td>
+        <td>24/12/2021 02:00:PM</td>
+        <td><div class="botonodonto"><a href="templateodontograma.html">Odontograma </a></div></td>
+        <td><div class="botonpago"><a href="#">PAGO ✔</a></div></td>
+      </tr>
+    <!-- fin fila -->
+
+    <!--fila -->
+     <!--fila -->
+      <tr>
+        <td>OdontoSpring </td>
+        <td>24/12/2021 02:00:PM</td>
+        <td><div class="botonodonto"><a href="templateodontograma.html">Odontograma </a></div></td>
+        <td> <div class="botonanulado"><a href="#">ANULADA</a></div></td>
+      </tr>
+    <!-- fin fila -->
+
+</table>
+
+
+
+<!-- fin tabla editar -->
+
+        </div>
+        
+      
+      </div>
+    </div>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+
+
+
+
+
+ 
+
+
+
+
+  
+
+</body>
+</html>

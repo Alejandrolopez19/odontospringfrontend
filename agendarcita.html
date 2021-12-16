@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/admincat.css">
   
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/paneladmin.css">
-    <link rel="stylesheet" href="css/registro.css">
+     <link rel="stylesheet" href="css/registro.css">
     
-    <title>Registrar Historia Clinica</title>
+    <title>Agendar Cita</title>
 </head>
 <body>
     <header>
-     <div class="header-container">
+        <div class="header-container">
             
             <div class="header-body">
                 <div class="header-banner-navbar">
@@ -47,9 +46,9 @@
     </div>
       <ul class="nav-links">
         
-
-      <li>
-          <a href="reghistoria.html" class="active">
+     
+         <li>
+          <a href="reghistoria.html">
             <i class='bx bx-book-alt' ></i>
             <span class="links_name">Registrar historia clinica</span>
           </a>
@@ -62,16 +61,18 @@
           </a>
         </li>
 
-
            <li>
-          <a href="agendarcita.html">
+          <a href="agendarcita.html" class="active">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Agendar Cita</span>
           </a>
         </li>
 
+
+    
+
             <li>
-          <a href="citas.html" class="active">
+          <a href="citas.html">
             <i class='bx bx-box' ></i>
             <span class="links_name">Citas</span>
           </a>
@@ -88,24 +89,32 @@
       </ul>
   </div>
   <section class="home-section">
-  
-<br>
     <div class="home-content">
-      
+     
+          
+
+
+<!-- busqueda pacientes -->
+
+<!-- fin busqueda pacientes -->
+
+<!-- Listado de pacientes y form agendar cita -->
 <div id="container">
-  <h1>&bull; Editar Registro Historia Clínica Paciente &bull;</h1>
+  <h1>&bull; Agendar Cita&bull;</h1>
   
   <form th:action="@{/formLogin/insertar}" th:object="${cliente}" method="post" id="contact_form">
     
 
     <div class="fechahistoria">
-      <label for="fecha">FECHA DE APERTURA:</label>   
+      <label for="fecha">FECHA DE CITA:</label>   
+
     </div>
 
     <div class="formfechahistoria">   
-       <input type="date" id="start" name="trip-start"
+       <input type="datetime-local" id="start" name="trip-start"
        value="2018-07-22"
        min="2021-01-01" max="2022-12-31" required>
+      
     </div>
  <br>
 <br>
@@ -121,34 +130,8 @@
       <input th:field="*{apellido}" type="text" placeholder="Apellidos" name="apellido" id="apellidos_input" required>
     </div>
 
- <br><br><br> <br>
-    <div class="fechanacimiento">
-      <label for="fecha">FECHA NACIMIENTO</label>   
-    </div>
-
-    <div class="formfechanacimiento">   
-       <input type="date" id="start" name="trip-start"
-       value="2018-07-22"
-       min="2021-01-01" max="2022-12-31" required>
-    </div>
-<br>
-<br>
  <br>
-<div class="edad">
-      <label for="edad"></label>
-      <input th:field="*{edad}" type="number" placeholder="EDAD" name="edad" id="edad_input" min="1" max="200" required>
-    </div>
-
-
-    <div class="selectsex">
-    <label for="selectsex"></label>
-      <select placeholder="Subject line" name="selectsex" id="selectsex_input" required>
-        <option disabled hidden selected>SEXO</option>
-        <option>MASCULINO</option>
-        <option>FEMENINO</option>
-      </select>
-    </div>
-    <br><br><br>
+ <br>
 
    <div class="selectdoc">
       <label for="selectdoc"></label>
@@ -164,77 +147,35 @@
       <input th:field="*{documento}" type="text" placeholder="Numero documento" name="documento" id="apellidos_input" required>
     </div>
 
-    <div class="direccion">
-      <label for="direccion"></label>
-      <input th:field="*{direccion}" type="text" placeholder="Direccion" name="direccion" id="direccion_input" required>
-    </div>
-
-    
     
     <div class="telephone">
       <label for="telephone"></label>
       <input th:field="*{celular}" type="text" placeholder="Telefono" name="telefono" id="telefono_input" required>
     </div>
-    
-    <div class="motivconsulta">
-      <textarea rows="2" cols="20" placeholder="Motivo consulta..." name="motivconsulta" id="motivconsulta_input" required></textarea>
+
+      <div class="selectodontologo">
+      <label for="selectodontologo"></label>
+      <select placeholder="Subject line" name="selectodontologo" id="odontologocita_input" required>
+        <option disabled hidden selected>Odontologo</option>
+        <option>Luis Mejia</option>
+        <option>Camilo Odontoplus</option>
+        <option>Odontologo Magic</option>
+      </select>
     </div>
-
-    <div class="antecedentesmedicos">
-      <p>
-
-    ANTECEDENTES MEDICOS:<br>
-
-    <input type="checkbox" name="antm-tmcm" > TRATAMIENTO CON MEDICAMENTOS<br>
-
-    <input type="checkbox" name="antm-ra" > REACCIONES ALÉRGICAS<br>
-
-    <input type="checkbox" name="antm-pdc" > PROBLEMAS DE COAGULACIÓN<br>
-
-    <input type="checkbox" name="antm-i" > IRRADIACION<br>
-
-    <input type="checkbox" name="antm-tdta" > TRASTORNOS DE TENSIÓN ARTERIAL<br>
-
-    <input type="checkbox" name="antm-s" > SINUSITIS<br>
-
-    <input type="checkbox" name="antm-er" > ENFERMEDADES RESPIRATORIAS<br>
-
-  </p>
-</div>
-
-<div class="observaciones">
-  
-   <textarea rows="2" cols="20" placeholder="observaciones..." name="observaciones" id="observaciones_input" required></textarea>
-
-</div>
-
-<br>
-<br>
-
-
-<!-- Prueba de odontograma-->
-
-<div class="odontograma">
-  
-
-
-
-
-
-</div>
-
-
-
-<!-- Prueba de odontograma-->
-
-
+   
+    
 
 
     <div class="submit">
-      <input type="submit" value="Guardar historia" id="form_button" />
+      <input type="submit" value="Agendar Cita" id="form_button" />
     </div>
   </form><!-- // End form -->
 </div><!-- // End #container -->
+
+
+<!-- fin Listado de pacientes y form agendar cita -->
+
+     
     </div>
   </section>
 
